@@ -997,6 +997,23 @@ export default class TypeComplex extends React.Component<Props> {
 }"
 `;
 
+exports[`babel-plugin-typescript-to-proptypes transforms ./fixtures/type-declared-after.ts 1`] = `
+"import _pt from 'prop-types';
+import React from 'react';
+export default class OutOfOrder extends React.Component<Props> {
+  static propTypes = {
+    b: _pt.string.isRequired
+  };
+  render() {
+    return null;
+  }
+
+}
+export interface Props {
+  b: string;
+}"
+`;
+
 exports[`babel-plugin-typescript-to-proptypes transforms ./fixtures/type-enum.ts 1`] = `
 "import _pt from 'prop-types';
 import React from 'react';
